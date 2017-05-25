@@ -1,0 +1,249 @@
+header {
+	max-width: 100%;
+	font-size: 1.5em;
+	font-weight: bold;
+	border-radius: 2px;
+	background-color: #222;
+	text-align: center;
+}
+
+header ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+header ul li {
+	max-width: 100%;
+}
+
+header ul li:first-child, header ul li a {
+	padding: 10px 16px;
+}
+
+header ul li a:hover {
+	background-color: #111;
+}
+
+figure {
+	text-align: center;
+	color: #000;
+}
+
+figure img#profilePic {
+	height: 200px;
+	max-width: 250px;
+	font-size: 8em;
+	color: transparent;
+	background: url("img/profile_default.png") no-repeat center;
+	background-size: contain;
+}
+
+section.contactInfo {
+	width: 50%;
+	float: left;
+	border-radius: 5px;
+}
+
+section.contactInfo ul, nav ul {
+	list-style-type: none;
+	margin: 0;
+	overflow: hidden;
+	background-color: #4CAF50;
+	padding: 20px 0px;
+	text-align: center;
+	color: #FFF;
+}
+
+section.contactInfo ul li {
+	max-width: 100%;
+}
+
+section#labels ul {
+	border-right: 2px dotted #DDD;
+}
+
+section#details ul{
+	overflow: auto;
+}
+
+section#details ul li:hover, nav ul li:hover {
+	background-color: #2A8D30;
+}
+
+div.clearfix {
+	clear: both;
+}
+
+nav {
+	margin-top: 2px;
+}
+
+nav ul li {
+	line-height: 150%;
+}
+
+nav ul li:hover {
+	background-color: #2A8D30;
+	cursor: pointer;
+}
+
+nav ul li.active {
+	background-color: #197C20;
+}
+
+section.tabContent {
+	width: 90%;
+	margin: auto;
+	text-align: center;
+}
+
+section#contactPic {
+	color: #000;
+}
+
+input[type=file]{
+	width: 300px;
+	background-color: #05E;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	font-size: 0.8em;
+	padding: 10px;
+}
+
+section#contactPic, section#contactDelete {
+	display: none;
+}
+
+section#contactForm, section#contactDelete {
+	width: 100%;
+}
+
+div#contactEditForm {
+	background-image: url("img/footer_lodyas.png");
+	width: 100%;
+	padding: 10px 10px 30px 10px;
+	letter-spacing: 3px;
+	text-align: left;
+	font-weight: bold;
+	border-radius: 5px;
+	box-shadow: 3px 3px 30px 5px rgba(55, 55, 55, 0.9);
+}
+
+input[type=text], input[type=password] {
+	width: 250px;
+	background-color: #efefef;
+	color: #666;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	box-shadow: 0px 0px 10px 2px rgba(120, 120, 120, 0.5);
+	border: 2px solid #a5cda5;
+	background-color: #e9f3e9;
+	color: #428c42
+}
+
+input[type=submit] {
+	width: 250px;
+	background-color: #36b03c;
+	font-size: 16px;
+	color: white;
+	padding: 10px 5px;
+	margin-top: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	letter-spacing: 2px;
+}
+
+input[type=submit]:hover {
+	background-color: #37b93d;
+}
+
+input[type=submit]:focus {
+	box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+}
+.errors, .error{
+	color: #FF4500;
+}
+
+.errors {
+	display: none;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 15px;
+}
+
+input.btn-danger {
+	background-color: #990000;
+}
+
+input.btn-danger:hover {
+	background-color: #cc0000;
+}
+
+@media screen and (min-width: 600px) {
+	.error {
+		display: none;
+	}
+	.errors {
+		display: inline;
+	}
+}
+
+@media screen and (min-width: 750px){
+	header ul li {
+	display: inline-block;
+	width: 50%;
+	min-height: 100px;
+	float:left;
+	}
+	
+	header ul li a {
+	height: 100px;
+	}
+	
+	figure {
+	max-width: 50%;
+	float: right;
+	margin-top: 15px;
+	}
+	
+	section.contactInfo {
+	width: 25%;
+	margin-top: 15px;
+	line-height: 150%;
+	}
+	
+	nav {
+	width: 80%;
+	float:right;
+	}
+	nav ul {
+	padding: 0px;
+	}
+	
+	nav ul li {
+	display: inline;
+	width: 33.33%;
+	line-height: 250%;
+	float:left;
+	}
+	
+	section#contactForm, section#contactDelete {
+	width: 80%;
+	margin-right: 0;
+	margin-top: 20px;
+    }
+
+}

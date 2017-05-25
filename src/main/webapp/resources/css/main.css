@@ -1,0 +1,272 @@
+body {
+	margin: 0;
+}
+
+header {
+	min-width: 100%;
+	font-size: 1.5em;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 2px;
+	background-color: #222;
+	text-align: center;
+	z-index: 5;
+}
+
+header ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+header ul li {
+	max-width: 100%;
+}
+
+header ul li:first-child, header ul li a {
+	padding: 10px 16px;
+}
+
+header ul li a:hover {
+	background-color: #111;
+}
+
+div#modalBox {
+	display: none;
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4)
+}
+
+div#contactForm {
+	position: relative;
+	max-width: 100%;
+	padding: 10px 10px 30px 10px;
+	background-image: url("img/footer_lodyas.png");
+	letter-spacing: 3px;
+	text-align: left;
+	font-weight: bold;
+	border-radius: 5px;
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+	from {top: -300px; opacity: 0}
+	to {top: 0;	opacity: 1}
+}
+
+@keyframes animatetop {
+	from {top: -300px; opacity: 0}
+	to {top: 0;	opacity: 1}
+}
+
+span#closeForm {
+	color: white;
+	float: right;
+	font-size: 1.75em;
+	font-weight: bold;
+}
+
+span#closeForm:hover, span#closeForm:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+input[type=text], input[type=password], input[type=file] {
+	width: 250px;
+	background-color: #efefef;
+	color: #666;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	box-shadow: 0px 0px 10px 2px rgba(120, 120, 120, 0.5);
+	border: 2px solid #a5cda5;
+	background-color: #e9f3e9;
+	color: #428c42
+}
+
+input[type=submit] {
+	width: 250px;
+	background-color: #36b03c;
+	font-size: inherit;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	letter-spacing: 2px;
+}
+
+input[type=submit]:hover {
+	background-color: #37b93d;
+}
+
+input[type=submit]:focus {
+	box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+}
+
+#clockPanel {
+	color: #000;
+	font-size: 60px;
+	text-align: center;
+	height: 50px;
+}
+
+main {
+	position: relative;
+	min-height: 500px;
+	max-width: 100%;
+	margin-top: 10px;
+	padding: 20px;
+	border-radius: 2px;
+	overflow: auto;
+}
+
+span#tooltip {
+	width: 220px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 80px;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+span#tooltip::after {
+	content: "";
+    position: absolute;
+    top: 100%;
+    right: 20%;
+    border-style: solid;
+    border-width: 8px;
+    border-color: #555 transparent transparent transparent;
+}
+
+input.searchInput {
+	background-image: url("img/search_icon.png");
+    background-position: 5px 8px;
+    background-size: 30px auto;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+	width: 100%;
+	color: #000;
+	border: 1px solid #000;
+	font-size: 1.1em;
+}
+
+input.searchInput:focus {
+	border: 1px solid #000;
+	box-shadow: 0px 0px 20px 2px rgba(211, 211, 211, 0.8);
+}
+
+table#contacts {
+	margin-top: 30px;
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+	color: #000;
+}
+
+table#contacts td, table#contacts th {
+	border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table#contacts tr:nth-child(even){background-color: #f2f2f2;}
+
+table#contacts tr td a {
+	display: inline-block;
+	width: 100%;
+}
+
+table#contacts tr td a img {
+	height: 30px;
+	max-width: 40px;
+	color: transparent;
+	background: url("img/profile_default.png") no-repeat center;
+	background-size: contain;
+}
+
+table#contacts th {
+	padding: 12px 0px;
+    background-color: #4CAF50;
+    color: #FFF;
+}
+
+table#contacts tr:hover {background-color: #ddd;}
+
+.error, .errors {
+	color: #FF4500;
+	font-size: 1em;
+}
+
+.errors {
+	display: none;
+}
+
+@media screen and (min-width: 600px) {
+	.error {
+		display: none;
+	}
+	.errors {
+		display: inline;
+	}
+}
+
+@media screen and (min-width: 750px) {
+	div#contactForm, div#contactForm table{
+		text-align: center;
+		max-width: 90%;
+		margin: auto;
+	}
+	
+	header {
+	position: fixed;
+	}
+	
+	header ul li {
+	display: inline-block;
+	width: 25%;
+	min-height: 100px;
+	float:left;
+	}
+	
+	header ul li a {
+	height: 100px;
+	}
+	
+	div#clockPanel {
+	height: 150px;
+	padding-top: 100px;
+	}
+	
+	main:hover span#tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+	
+	input.searchInput {
+	width: 50%;
+	}	
+}
