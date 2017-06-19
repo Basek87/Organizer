@@ -8,7 +8,7 @@ password: admin
 
 Is possible to change username in import.sql file.
 Database properties are in hibernate.properties file here you can change database password, name etc.
-Database is set to "create" - A new database is created when the application is started old data are deleted.  
+Database is set to "create" - A new database is created when the application is started.  
 
 
 
